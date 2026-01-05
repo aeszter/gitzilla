@@ -53,12 +53,11 @@ def get_changes(sOldRev, sNewRev, sFormatSpec, sSeparator, bIncludeDiffStat, sRe
   sFormatSpec = sFormatSpec.strip("\n").replace("\n", "%n")
 
   if bIncludeDiffStat:
-    sCommand = "whatchanged"
+    asCommand = ['git', 'log', '--raw',
+                  "--format=format:%s%s" % (sSeparator, sFormatSpec)]
   else:
-    sCommand = "log"
-
-  asCommand = ['git', sCommand,
-               "--format=format:%s%s" % (sSeparator, sFormatSpec)]
+    asCommand = ['git', 'log',
+                  "--format=format:%s%s" % (sSeparator, sFormatSpec)]
 
   # exclude all changes which are also found on other refs
   # and hence have already been processed.

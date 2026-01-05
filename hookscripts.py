@@ -117,7 +117,7 @@ def post_receive(aasPushes=None):
   aren't read from stdin (gerrit integration).
   """
   siteconfig = configparser.RawConfigParser()
-  siteconfig.readfp(open("/etc/gitzillarc"))
+  siteconfig.read_file(open("/etc/gitzillarc"))
   sRepo = os.getcwd()
 
   userconfig = configparser.RawConfigParser()
@@ -148,7 +148,7 @@ def update():
   username and password.
   """
   siteconfig = configparser.RawConfigParser()
-  siteconfig.readfp(open("/etc/gitzillarc"))
+  siteconfig.read_file(open("/etc/gitzillarc"))
   sRepo = os.getcwd()
 
   logger = get_logger(siteconfig)

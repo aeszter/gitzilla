@@ -1,8 +1,6 @@
 
 # GitZilla
 
-**NOTE** : This project is no longer actively maintained.
-
 GitZilla is Python magic to support Git-Bugzilla integration. There are
 various ways of using GitZilla.
 
@@ -295,15 +293,13 @@ and http://github.com/williamh/pybugz/releases
 
 ## Download
 
-GitZilla is hosted at GitHub : http://github.com/gera/gitzilla
+The original author, Davendra Gera, does not maintain this project
+anymore, and has archived it on GitHub.
 
-You can access the downloads at : http://github.com/gera/gitzilla/downloads
-
-The download page contains a .deb which should work on Debian and Ubuntu
-systems.
-
+Since I still use it daily, I've forked it:
+http://github.com/aeszter/gitzilla
 
 ## Mailing list
 
-The official GitZilla mailing list: gitzilla-talk@googlegroups.com
+The official GitZilla mailing list used to be at: gitzilla-talk@googlegroups.com
 
